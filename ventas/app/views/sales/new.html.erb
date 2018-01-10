@@ -1,0 +1,18 @@
+<h1>Sales#new</h1>
+
+
+
+<%= form_with model: Sale.new, local: true do |form| %>
+ <%= form.label :detail, "Detalle de la Venta" %>
+ <%= form.text_area :detail %>
+ <%= form.label :category, "Categoria" %>
+ <%= form.text_field :category %>
+ <%= form.label :value, "valor de la venta" %>
+ <%= form.number_field :value %>
+ <%= form.label :discount, "porcentaje de descuento aplicado de (1-100)" %>
+ <%= form.number_field :discount %>
+ <%= form.label :tax, "porcentaje correspondiente al IVA." %>
+ <%= form.check_box :tax %>
+
+ <%= form.submit "Crear" %>
+<% end %>
